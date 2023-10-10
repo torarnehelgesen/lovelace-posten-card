@@ -55,13 +55,12 @@ export const deliveryDayText = (idx: number, deliveryDay: Moment, formattedDate:
 //['2023-10-09', '2023-10-11', '2023-10-13', '2023-10-17', '2023-10-19', '2023-10-23']
 const parseDeliveryDay = (deliveryDay: string, locale: string, config: PostenCardConfig): DeliveryDay => {
   const dateFormat = !config.date_format || config.date_format.trim() === '' ? defaultDateFormat : config.date_format;
-  document.write('test');
+//  console.write('test');
   const segments = deliveryDay.split('-');
   const deliveryDayMoment = moment().month(months[segments[1]]).calendar(segments[2]);
   const formattedDate = dateUtils.formatDate(locale, dateFormat, deliveryDayMoment).capitalize();
   const daysUntilDelivery = daysUntil(moment(), deliveryDayMoment);
   const isDeliveryToday = dateUtils.isDeliveryToday(deliveryDayMoment);
-  
 
   return {
     date: deliveryDayMoment,
