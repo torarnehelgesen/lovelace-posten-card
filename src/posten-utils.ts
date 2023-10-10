@@ -7,18 +7,18 @@ import { DeliveryDay } from './types';
 import * as dateUtils from './date-utils';
 
 const months = {
-  januar: 1,
-  februar: 2,
-  mars: 3,
-  april: 4,
-  mai: 5,
-  juni: 6,
-  juli: 7,
-  august: 8,
-  september: 9,
-  oktober: 10,
-  november: 11,
-  desember: 12,
+  januar: 0,
+  februar: 1,
+  mars: 2,
+  april: 3,
+  mai: 4,
+  juni: 5,
+  juli: 6,
+  august: 7,
+  september: 8,
+  oktober: 9,
+  november: 10,
+  desember: 11,
 };
 
 export const defaultNumOfDays = 6;
@@ -56,8 +56,7 @@ export const deliveryDayText = (idx: number, deliveryDay: Moment, formattedDate:
 const parseDeliveryDay = (deliveryDay: string, locale: string, config: PostenCardConfig): DeliveryDay => {
   const dateFormat = !config.date_format || config.date_format.trim() === '' ? defaultDateFormat : config.date_format;
   const segments = deliveryDay.split('-');
-  console.log(segments);
-  const deliveryDayMoment = moment().month(months[segments[1]]).date(segments[2]);
+  const deliveryDayMoment = moment().month(+segments[1] - 1).date(segments[2]);
   const formattedDate = dateUtils.formatDate(locale, dateFormat, deliveryDayMoment).capitalize();
   const daysUntilDelivery = daysUntil(moment(), deliveryDayMoment);
   const isDeliveryToday = dateUtils.isDeliveryToday(deliveryDayMoment);
