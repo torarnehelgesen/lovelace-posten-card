@@ -85,7 +85,7 @@ export class PostenCard extends LitElement {
 
     return html`
       <ha-card
-        style="${isUsePostenBackgroundColor ? 'background-color: #e32d22; color: #fff' : ''}"
+        style="${isUsePostenBackgroundColor ? 'background-color: var(--card-background-color);' : ''}"
         @action=${this._handleAction}
         .actionHandler=${actionHandler({
           hasHold: hasAction(this._config.hold_action),

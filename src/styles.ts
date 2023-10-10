@@ -4,17 +4,19 @@ export const getStyles = (): CSSResult => {
   return css`
     .logo {
       margin-right: 20px;
+      height: 40px;
     }
     .icon {
       flex: 1;
       text-align: right;
     }
     .deliveryDays {
-      background-color: #fff;
-      color: #000;
+      background-color: var(--table-row-background-color);
+      color: var(--primary-text-color);
     }
     .deliveryDays div:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: var(--table-row-alternative-background-color);
+      color: var(--primary-text-color);
     }
     .deliveryDay {
       display: flex;
