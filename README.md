@@ -59,7 +59,7 @@ Remember to replace the `postCode` parameter with your own.
 [commits]: https://github.com/torarnehelgesen/lovelace-posten-card/commits/master
 [devcontainer]: https://code.visualstudio.com/docs/remote/containers
 [license-shield]: https://img.shields.io/github/license/ezand/lovelace-posten-card.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/v/release/ezand/lovelace-posten-card.svg?style=for-the-badge
 [releases]: https://github.com/torarnehelgesen/lovelace-posten-card/releases
 [screenshot-card]: ./docs/screenshot_card.png
