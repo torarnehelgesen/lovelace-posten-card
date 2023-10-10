@@ -17,4 +17,5 @@ jobs:
       - name: Build
         run: |
           npm install
+          npm i rollup-plugin-uglify -D --force
           npm run build
