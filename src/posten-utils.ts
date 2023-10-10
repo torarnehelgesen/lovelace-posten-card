@@ -54,8 +54,8 @@ export const deliveryDayText = (idx: number, deliveryDay: Moment, formattedDate:
 };
 //['2023-10-09', '2023-10-11', '2023-10-13', '2023-10-17', '2023-10-19', '2023-10-23'] //  console.write('test');
 define(['moment', 'moment/locale/de'], function (moment) {
-    moment.locale('de');
-    console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
+  moment.locale('de');
+  console.log(moment().format('LLLL')); // 'Freitag, 24. Juni 2016 01:42'
 });
 const parseDeliveryDay = (deliveryDay: string, locale: string, config: PostenCardConfig): DeliveryDay => {
   const dateFormat = !config.date_format || config.date_format.trim() === '' ? defaultDateFormat : config.date_format;
