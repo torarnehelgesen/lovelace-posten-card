@@ -11,30 +11,36 @@ A Lovelace card to display Norwegian Posten delivery days.
 ## Prerequisites
 
 This card assumes you have a sensor that provides the next delivery days,
-see [this example](https://github.com/ezand/home-assistant-config/blob/master/sensors/posten-delivery-days.yaml).
+see [this example](https://github.com/ezand/home-assistant-config/blob/master/sensors/posten-delivery-days.yaml) or [this module](https://github.com/BobTheShoplifter/HomeAssistant-Posten)
+
 Remember to replace the `postCode` parameter with your own.
+
 
 ## Installation
 
 ### [HACS](https://hacs.xyz/) (Home Assistant Community Store)
 
 1. Go to HACS page on your Home Assistant instance
-1. Select `Frontend`
-1. Press add icon and search for `posten`
-1. Select Posten Card repo and install
-1. Force refresh the Home Assistant page (<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
-1. Add posten-card to your page
+2. Select `Frontend`
+3. Click menu at top on the right
+4. Click Custom repositories
+5. Enter `https://github.com/torarnehelgesen/lovelace-posten-card` in repositories
+6. Click Lovelace in category
+7. Press add icon and search for `posten`
+8. Select Posten Card new repo and install
+9. Force refresh the Home Assistant page (<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
+10. Add posten-card to your page
 
 ### Manual
 
-1. Download the 'posten-card.js' from the latest [release](https://github.com/ezand/lovelace-posten-card/releases) (with right click, save link as)
-1. Place the downloaded file on your Home Assistant machine in the `config/www` folder (when there is no `www` folder in the folder where your `configuration.yaml` file is, create it and place the file there)
-1. In Home Assistant go to `Configuration->Lovelace Dashboards->Resources` (When there is no `resources` tag on the `Lovelace Dashboard` page, enable advanced mode in your account settings, rand retry this step)
-1. Add a new resource
+1. Download the 'posten-card.js' from the latest [release](https://github.com/torarnehelgesen/lovelace-posten-card/releases) (with right click, save link as)
+2. Place the downloaded file on your Home Assistant machine in the `config/www` folder (when there is no `www` folder in the folder where your `configuration.yaml` file is, create it and place the file there)
+2. In Home Assistant go to `Configuration->Lovelace Dashboards->Resources` (When there is no `resources` tag on the `Lovelace Dashboard` page, enable advanced mode in your account settings, rand retry this step)
+3. Add a new resource
    1. Url = `/local/posten-card.js`
    1. Resource type = `module`
-1. Force refresh the Home Assistant page (<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
-1. Add posten-card to your page
+4. Force refresh the Home Assistant page (<kbd>Ctrl</kbd> + <kbd>F5</kbd>)
+5. Add posten-card to your page
 
 ## Options
 
